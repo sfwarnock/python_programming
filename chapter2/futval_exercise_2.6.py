@@ -17,11 +17,9 @@ def main():
     a = eval(input("Enter the yearly contrubution after year one: "))
     
     for i in range(x):
-        p = p * (1 + apr)
-        a = a * (1 + apr)
+        p = (p * (1 + apr)) + ((a * (1 + apr)) - a) / apr
         
     #print("The value in",x, "years is:", p)
     
     print(p)
-    print(a)
 main()
