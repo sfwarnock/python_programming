@@ -18,5 +18,5 @@ def main():
     p = math.pi
     v = (4/3) * p * (r **3)
     a = 4 * p * (r ** 2)    
-    print("The volume of the given sphere is: ",round(v, 3),"inches cubed.  And the are of the given sphere is ", round(a, 3), "inches squared.")
+    print("The volume of the given sphere is: ",round(v, 3),"inches cubed.  And the area of the given sphere is ", round(a, 3), "inches squared.")
 main()
