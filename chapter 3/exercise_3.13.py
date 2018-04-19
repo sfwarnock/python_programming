@@ -2,7 +2,7 @@
 """
 Created on Thu Apr 19
 
-@author: 175272
+@author: Scott Warnock
 """
 
 # Exercise 3.13
