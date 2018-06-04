@@ -19,16 +19,18 @@ Created on Mon Jun  4 2018
 #   speeds in excess of 3 mile per hour.
 
 def main():
-    temp = -20
+    temp = -30
     windSpeed = 0 
     windChill = 35.74 + (.6251 * temp) - 35.75 * (windSpeed ** .16) + .4275 * (windSpeed ** .16)
-
-    for temp in range(temp + 5):
-        if windSpeed <= 3:
-            windChill = 35.74 + (.6251 * temp) - 35.75 * (0 ** .16) + .4275 * (0 ** .16)
-        print(temp, windSpeed,windChill)
-        else:
-            windChill = 35.74 + (.6251 * temp) - 35.75 * (windSpeed ** .16) + .4275 * (windSpeed ** .16)
+    
+    while windSpeed <= 50:
+        windChill = 35.74 + (.6251 * temp) - 35.75 * (windSpeed ** .16) + .4275 * (windSpeed ** .16)
+        temp += 10
+        if temp >= 61: break
+        while temp <= 60:
             windSpeed += 5
-    print(temp, windSpeed,windChill)
+            windChill = 35.74 + (.6251 * temp) - 35.75 * (windSpeed ** .16) + .4275 * (windSpeed ** .16)
+            if windSpeed >= 51: break
+            print (windSpeed, windChill)
+
 main()
