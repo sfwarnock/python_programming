@@ -22,17 +22,12 @@ def main():
     temp = -30
     windSpeed = 0 
     windChill = 35.74 + (.6251 * temp) - 35.75 * (windSpeed ** .16) + .4275 * (windSpeed ** .16)
-    chillList = []
     
-    while temp <= 60:
-        windChill = 35.74 + (.6251 * temp) - 35.75 * (windSpeed ** .16) + .4275 * (windSpeed ** .16)
-        temp += 10
-        chillList.append(round(windChill,0))
-        if temp >= 61: break
-        while windSpeed <= 50:
+    while windSpeed <= 50:
+        windSpeed += 5
+        for temp in range(-10,60,10):
             windChill = 35.74 + (.6251 * temp) - 35.75 * (windSpeed ** .16) + .4275 * (windSpeed ** .16)
-            windSpeed += 5
-            if windSpeed >= 51: break
-        print (windSpeed, chillList)
-
+            temp += 10
+            print (windSpeed, temp, round(windChill,0))
+            
 main()
