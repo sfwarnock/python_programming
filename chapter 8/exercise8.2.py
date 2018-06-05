@@ -20,18 +20,25 @@ Created on Mon Jun  4 2018
 
 def main():
     temp = 0
-    windSpeed = 0 
+    windSpeed = -5 
     windChill = 35.74 + (.6251 * temp) - 35.75 * (windSpeed ** .16) + .4275 * (windSpeed ** .16)
     
+    print('{0:^135}'.format('Windchill Table'))
+    
     for temp in range(-20,70,10):
-        print("{:10}".format(temp),end = " ")
-    print() 
-
+        print("{:^15}".format(temp), end = "")
+    print()
+            
     while windSpeed <= 45:
         windSpeed += 5
-        print ('{0:2}'.format(windSpeed))
+        print(windSpeed)
         for temp in range(-30,60,10):
-            windChill = 35.74 + (.6251 * temp) - 35.75 * (windSpeed ** .16) + .4275 * (windSpeed ** .16)
-            temp += 10
-            print ('{0:10}'.format(round(windChill,0)), end = " ")         
+            if windSpeed <= 3:
+                print ('{0:^15}'.format('NAN'),end = "")
+                temp += 10
+            else:    
+                windChill = 35.74 + (.6251 * temp) - 35.75 * (windSpeed ** .16) + .4275 * (windSpeed ** .16)
+                temp += 10
+                print ('{0:^15}'.format(round(windChill,0)),end = "")   
+    
 main()
