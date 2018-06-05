@@ -23,11 +23,15 @@ def main():
     windSpeed = 0 
     windChill = 35.74 + (.6251 * temp) - 35.75 * (windSpeed ** .16) + .4275 * (windSpeed ** .16)
     
+    for temp in range(-20,70,10):
+        print("{:10}".format(temp),end = " ")
+    print() 
+
     while windSpeed <= 45:
         windSpeed += 5
+        print ('{0:2}'.format(windSpeed))
         for temp in range(-30,60,10):
             windChill = 35.74 + (.6251 * temp) - 35.75 * (windSpeed ** .16) + .4275 * (windSpeed ** .16)
             temp += 10
-            print (windSpeed, temp, round(windChill,0))
-            
+            print ('{0:10}'.format(round(windChill,0)), end = " ")         
 main()
