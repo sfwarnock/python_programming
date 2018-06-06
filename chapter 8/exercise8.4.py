@@ -18,8 +18,20 @@ Created on Wed Jun  6 2018
 #   open question in mathematics whether this sequence will always go to 1 for every
 #   possiable starting value.
 #
-#   Write a program that gets a starting value from the duser and the prints the Syracuse
+#   Write a program that gets a starting value from the user and the prints the Syracuse
 #   for that starting value.
 
 def main():
+    x = eval(input("Enter a number: "))
     
+    if x % 2 == 0:
+        while x >= 1:
+            x = x / 2
+            print (x)
+    else:
+        x = (3 * x) + 1
+        print(x)
+        while x >=1:
+            x = x / 2
+            print (x)
+main()
