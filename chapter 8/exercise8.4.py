@@ -26,8 +26,15 @@ def main():
     
     if x % 2 == 0:
         while x >= 1:
-            x = x / 2
-            print (x)
+            if x % 2 == 0:
+                x = x / 2
+                print (x)
+            else:
+                x = (3 * x) + 1
+                print(x)
+                while x >=1:
+                    x = x / 2
+                    print (x)
     else:
         x = (3 * x) + 1
         print(x)
