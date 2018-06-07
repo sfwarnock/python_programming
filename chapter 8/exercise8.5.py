@@ -18,8 +18,15 @@ def main():
     n = eval(input("Enter a whole number: "))
     
     while n > 1:
-        if n % 2 == 0 or math.sqrt(n) == int:
-            print("Number is not prime.");break
+        if n % 2 == 0:
+            x = n / 2
+            if x  % 2 == 0 or math.sqrt(x) == int: 
+                print(n,"is not prime.");break
+            else:
+                print(x);break
+        if math.sqrt(n) == int:
+                x = math.sqrt(n)
+                print(n,"is not prime.");break
         else:
-            print("Number is prime.");break
+            print(n,"is prime.");break
 main()
