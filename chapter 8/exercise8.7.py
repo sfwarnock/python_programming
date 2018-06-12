@@ -14,9 +14,17 @@ Created on Mon Jun 11 2018
 def main():
     n = eval(input("Enter a number: "))
     
+    y, x = 2, 3
+    
+    z = x + y
+    
     if n % 2 == 0:
-        print("Number is even.")
+        x = n / 2
+        print (x)
     else:
-        print("No two prime number sum to the total of", n)
+        while z != n:
+            x += 1
+            z = x + y
+        print(x, y,n)
 
 main()
