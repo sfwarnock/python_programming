@@ -16,3 +16,16 @@ Created on Mon Jun 18 2018
 
 def main():
     
+    gasTankEmpty = eval(input("Please enter the total volume in gallons of your gas tank: "))
+    
+    lastFillUp = eval(input("Enter the volume, in gallons, of your last fill up: "))
+    
+    odometerStart = eval(input("Please enter the starting odometer reading: "))
+    
+    odometerFinish = eval(input("Enter the ending odometer reading: "))
+        
+    mpg = (odometerStart - odometerFinish) / (lastFillUp - gasTankEmpty) 
+    
+    print(mpg)
+    
+main()
