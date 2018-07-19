@@ -16,4 +16,16 @@ Created on Thu Jul 19 2018
 
 def main():
     
+#   ask how many days of averges to enter
+    numDays = eval(input("How days of averges do you have to enter?"))
     
+    avgTemp = eval(input("Enter days average temperature: "))
+    
+    for avgTemp in range(numDays):
+        
+    
+#   compute cooling and heating day totals
+
+#   print the number of heating and cooling days
+
+main()    
