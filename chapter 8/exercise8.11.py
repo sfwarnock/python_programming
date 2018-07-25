@@ -21,10 +21,20 @@ def main():
     
     avgTemp = eval(input("Enter days average temperature: "))
     
-    for avgTemp in range(numDays):
-        
+    coolDays = y
     
-#   compute cooling and heating day totals
+    heatDays = x
+    
+    for avgTemp in range(numDays):
+    #   compute cooling and heating day totals
+        if avgTemp >= 80:
+            coolDays = 80 - avgTemp
+            
+        elif avgTemp <= 60:
+            heatDays = 60 - avgTemp
+            
+        else:
+            
 
 #   print the number of heating and cooling days
 
