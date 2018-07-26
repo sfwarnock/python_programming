@@ -21,6 +21,8 @@ def main():
     
     avgTemp = eval(input("Enter days average temperature: "))
     
+    totalDays = eval(input('How many days of temperatures do you have?'))
+    
     coolDays = 0
     
     heatDays = 0
