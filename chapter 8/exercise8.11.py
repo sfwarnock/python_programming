@@ -34,7 +34,7 @@ def main():
         belowCooling = 60 - avgTemp
         heatDays = belowCooling + heatDays
                         
-    print(heatDays, coolDays)
+    print('Total heating days are: ', heatDays, coolDays)
 #   print the number of heating and cooling days
 
 main()    
