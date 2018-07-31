@@ -1,4 +1,4 @@
-r# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 Created on Mon Jul 30 2018
 
@@ -26,7 +26,7 @@ def getInputs():
     #Returns the three simulation parameters
     a = eval(input("What is the prob. player A wins a serve? "))
     b = eval(input("What is the prob. player B wins a serve? "))
-    n = eval(input("How many games to simulate?"))
+    n = eval(input("How many games to simulate? "))
     return a, b, n
 
 def simNGames(n, probA, probB):
@@ -70,8 +70,8 @@ def gameOver(a,b):
 def printSummary(winsA, winsB):
     # Prints a summary of wins for each player.
     n = winsA + winsB
-    print("\Games simulated: ", n)
+    print("\nGames simulated: ", n)
     print("Wins for A: {0} ({1:0.1%})".format(winsA, winsA/n))
     print("Wins for B: {0} ({1:0.1%})".format(winsB, winsB/n))
     
-if__name__ == '__main__': main()
+if __name__ == '__main__': main()
