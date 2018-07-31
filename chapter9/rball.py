@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+r# -*- coding: utf-8 -*-
 """
 Created on Mon Jul 30 2018
 
@@ -48,10 +48,30 @@ def simOneGame(probA, probB):
     #Returns final scores for A and B
     serving = "A"
     scoreA = 0
-    ScoreB = 0
+    scoreB = 0
     while not gameOver(scoreA, scoreB):
         if serving == "A":
             if random() < probA:
                 scoreA = scoreA + 1
             else:
-                
+                serving == "B"
+        else:
+            if random() < probB:
+                scoreB = scoreB + 1
+            else:
+                serving = "A"
+    return scoreA, scoreB
+
+def gameOver(a,b):
+    # a and b represent scores for a racquetball game
+    # Returns True is the game is over, False otherwise
+    return a==15 or b==15
+
+def printSummary(winsA, winsB):
+    # Prints a summary of wins for each player.
+    n = winsA + winsB
+    print("\Games simulated: ", n)
+    print("Wins for A: {0} ({1:0.1%})".format(winsA, winsA/n))
+    print("Wins for B: {0} ({1:0.1%})".format(winsB, winsB/n))
+    
+if__name__ == '__main__': main()
