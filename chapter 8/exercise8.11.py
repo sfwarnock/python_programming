@@ -27,10 +27,10 @@ def main():
     coolDegreeDays, heatDegreeDays = 0, 0
     
     if avgTemp >= 80:
-        coolDegreeDays = coolDegreeDays + 1
+        coolDegreeDays = avgTemp - 80
             
     elif avgTemp <= 60:
-        heatDegreeDays = heatDegreeDays + 1
+        heatDegreeDays = 60 - avgTemp
                         
     print('Total heating days are: ', heatDegreeDays)
     print('Total cooling days are: ', coolDegreeDays)
